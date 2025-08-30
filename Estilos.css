@@ -195,18 +195,19 @@ main {
   color: var(--color-texto-principal);
 }
 
-  /* ==== Tarjetas de Planes ==== */
-    .plan-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-      border-radius: 15px;
-      background: #ffffff;
-    }
+/* ==== Tarjetas de Planes ==== */
+.plan-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-radius: 15px;
+  background: #ffffff;
+}
 
-    .plan-card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      background: linear-gradient(135deg, #f9fafb, #eef2ff);
-    }
+.plan-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+}
+
 .plan {
   background: #fff;
   border-radius: 12px;
@@ -268,14 +269,17 @@ main {
 .rotate-45 {
   transform: rotate(45deg);
 }
+
 /* Sobre Nosotros */
 .creator-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .creator-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
 /* ================== FOOTER ================== */
 footer {
   background-color: var(--color-footer-fondo);
@@ -302,6 +306,39 @@ footer {
 }
 
 /* ================== RESPONSIVE ================== */
+
+/* Pantallas grandes (computadora) - Título más cerca del header y funcionalidades en escalera */
+@media (min-width: 1200px) {
+  main {
+    padding: 30px 40px; /* Reducir padding superior para acercar título al header */
+  }
+  
+  .lado-izquierdo h1 {
+    margin-bottom: 30px; /* Reducir margen inferior del título */
+  }
+  
+  /* Funcionalidades en escalera para pantallas grandes */
+  .funcionalidades li:nth-child(1) {
+    margin-left: 0;
+  }
+  
+  .funcionalidades li:nth-child(2) {
+    margin-left: 40px;
+  }
+  
+  .funcionalidades li:nth-child(3) {
+    margin-left: 80px;
+  }
+  
+  .funcionalidades li:nth-child(4) {
+    margin-left: 120px;
+  }
+  
+  .funcionalidades li:nth-child(5) {
+    margin-left: 160px;
+  }
+}
+
 @media (max-width: 1024px) {
   .lado-izquierdo h1 {
     font-size: 2.2em;
@@ -324,18 +361,22 @@ footer {
     width: 220px;
     height: 220px;
   }
+  
+  /* En pantallas medianas y pequeñas, funcionalidades en línea */
+  .funcionalidades li {
+    margin-left: 0 !important;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
   header {
     flex-direction: column;
     gap: 15px;
-    text-align: center;
   }
   nav {
     flex-wrap: wrap;
     gap: 15px;
-    justify-content: center;
   }
   .lado-izquierdo h1 {
     font-size: 1.8em;
@@ -350,5 +391,138 @@ footer {
   }
   .footer-links {
     gap: 15px;
+  }
+}
+
+/* ====== RESPONSIVIDAD MEJORADA ====== */
+
+/* Dispositivos móviles pequeños */
+@media (max-width: 576px) {
+  .logo-header {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .logo-circular {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .rombo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .creator-card img {
+    height: 150px;
+  }
+  
+  .btn-probar {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Dispositivos móviles medianos */
+@media (max-width: 768px) {
+  .navbar-brand span {
+    font-size: 1.1rem !important;
+  }
+  
+  .logo-circular {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .funcionalidades .d-flex {
+    margin-left: 0 !important;
+  }
+  
+  .plan-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Dispositivos tablets */
+@media (max-width: 992px) {
+  .logo-circular {
+    margin-bottom: 2rem;
+  }
+  
+  .funcionalidades {
+    text-align: center;
+  }
+  
+  .funcionalidades .d-flex {
+    justify-content: center;
+  }
+}
+
+/* Dispositivos grandes */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .logo-circular {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* ====== ANIMACIONES ====== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.funcionalidades .d-flex,
+.plan-card,
+.creator-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.funcionalidades .d-flex:nth-child(1) { animation-delay: 0.1s; }
+.funcionalidades .d-flex:nth-child(2) { animation-delay: 0.2s; }
+.funcionalidades .d-flex:nth-child(3) { animation-delay: 0.3s; }
+.funcionalidades .d-flex:nth-child(4) { animation-delay: 0.4s; }
+.funcionalidades .d-flex:nth-child(5) { animation-delay: 0.5s; }
+
+/* ====== MEJORAS DE ACCESIBILIDAD ====== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ====== ESTILOS PARA IMPRESIÓN ====== */
+@media print {
+  .navbar,
+  .footer,
+  .btn {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
   }
 }
