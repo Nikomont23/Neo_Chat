@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Neo Chat</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="Estilos.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <!-- ====== ENCABEZADO ====== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: var(--color-header);">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="/Multimedia/Logo.png" alt="Logo" class="logo-header me-2">
+          <span class="fw-bold fs-4" style="color: var(--color-header-texto);">Neo Chat</span>
+        </a>
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="menuNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link fw-bold" href="index.html"><i class="bi bi-house-door-fill me-1"></i>Inicio</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="planes.html"><i class="bi bi-box-seam me-1"></i>Planes</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="contacto.html"><i class="bi bi-envelope-fill me-1"></i>Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ====== CONTENIDO PRINCIPAL ====== -->
+  <main class="container my-5 flex-grow-1">
+  <div class="container text-center mb-5">
+  <h1 class="fw-bold text-dark">Contáctanos</h1>
+  <p class="lead text-secondary">
+    ¿Tienes preguntas o necesitas ayuda? Nuestro equipo está aquí para ti. 
+    Completa el formulario y nos pondremos en contacto lo antes posible.
+  </p>
+</div>
+
+  <div class="container">
+    <div class="row g-4">
+      <!-- FORMULARIO -->
+      <div class="col-lg-6">
+        <div class="card shadow-lg border-0 rounded-4">
+          <div class="card-body p-4">
+            <h2 class="text-center mb-4 fw-bold text-primary">Envíanos un mensaje</h2>
+            <form action="https://formsubmit.co/your@email.com" method="POST">
+              <div class="mb-3">
+                <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+                <input type="text" class="form-control rounded-3" id="nombre" placeholder="Escribe tu nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">Correo electrónico</label>
+                <input type="email" class="form-control rounded-3" id="email" placeholder="ejemplo@correo.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="asunto" class="form-label fw-semibold">Asunto</label>
+                <input type="text" class="form-control rounded-3" id="asunto" placeholder="Motivo de tu mensaje" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label fw-semibold">Mensaje</label>
+                <textarea class="form-control rounded-3" id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-lg fw-bold text-white" style="background-color: #0d6efd; border-radius: 1rem; transition: 0.3s;">
+                  Enviar mensaje
+                </button>
+              </div>
+              <input type="hidden" name="_next" value="contacto.html">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAPA -->
+      <div class="col-lg-6">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
+          <div class="card-body p-0">
+            <h2 class="text-center mt-3 fw-bold text-primary">Nuestra ubicación</h2>
+            <!-- Mapa de Google Maps -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.845507399413!2d-74.08175!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a4533e4df9%3A0x1234567890abcdef!2sBogotá%2C%20Colombia!5e0!3m2!1ses!2sco!4v1694456789012!5m2!1ses!2sco" 
+              width="100%" 
+              height="400" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="mt-auto" style="background-color: var(--color-footer-fondo); border-top: 2px solid var(--color-footer-borde);">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+      <div class="text-muted">&copy; 2025 Neo Chat. Todos los derechos reservados.</div>
+      <div class="footer-links d-flex gap-3 mt-2 mt-md-0">
+        <a href="que es.html"><i class="bi bi-info-circle-fill me-1"></i>¿Qué es Neo Chat?</a>
+        <a href="sobre nosotros.html"><i class="bi bi-people-fill me-1"></i>Sobre Nosotros</a>
+        <a href="politica de privacidad.html"><i class="bi bi-shield-lock-fill me-1"></i>Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

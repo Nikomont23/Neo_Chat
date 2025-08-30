@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo Chat</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="Librerias/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Librerias/Iconos Bootstrap/bootstrap-icons.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="Estilos.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <!-- ====== ENCABEZADO ====== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: var(--color-header);">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="/Multimedia/Logo.png" alt="Logo" class="logo-header me-2">
+          <span class="fw-bold fs-4" style="color: var(--color-header-texto);">Neo Chat</span>
+        </a>
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="menuNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link fw-bold" href="index.html"><i class="bi bi-house-door-fill me-1"></i>Inicio</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="planes.html"><i class="bi bi-box-seam me-1"></i>Planes</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="contacto.html"><i class="bi bi-envelope-fill me-1"></i>Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ====== CONTENIDO PRINCIPAL ====== -->
+<main class="py-5" style="background: linear-gradient(to bottom, #dbeafe, #ffffff);">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5 text-dark">Nuestros Planes</h2>
+    <div class="row g-4">
+
+      <!-- Plan Básico -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 h-100 plan-card">
+          <div class="card-body">
+            <div class="icon-circle bg-primary text-white mx-auto mb-3">
+              <i class="bi bi-chat-dots fs-2"></i>
+            </div>
+            <h4 class="fw-bold text-primary">Plan Básico</h4>
+            <p class="text-muted">Perfecto para usuarios que quieren empezar a interactuar con el chatbot.</p>
+            <ul class="list-unstyled text-start">
+              <li>✅ 100 mensajes/mes</li>
+              <li>✅ Soporte por email</li>
+              <li>✅ Respuestas rápidas</li>
+            </ul>
+            <h3 class="fw-bold text-primary my-3">$5 <small class="fs-6">/ mes</small></h3>
+            <a href="#" class="btn btn-outline-primary btn-lg">Elegir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan Pro -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 h-100 plan-card">
+          <div class="card-body">
+            <div class="icon-circle bg-success text-white mx-auto mb-3">
+              <i class="bi bi-stars fs-2"></i>
+            </div>
+            <h4 class="fw-bold text-success">Plan Pro</h4>
+            <p class="text-muted">Ideal para quienes necesitan más funciones y mayor capacidad.</p>
+            <ul class="list-unstyled text-start">
+              <li>✅ 1000 mensajes/mes</li>
+              <li>✅ Soporte prioritario</li>
+              <li>✅ Integraciones avanzadas</li>
+            </ul>
+            <h3 class="fw-bold text-success my-3">$15 <small class="fs-6">/ mes</small></h3>
+            <a href="#" class="btn btn-success btn-lg">Elegir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan Premium -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 h-100 plan-card">
+          <div class="card-body">
+            <div class="icon-circle bg-danger text-white mx-auto mb-3">
+              <i class="bi bi-gem fs-2"></i>
+            </div>
+            <h4 class="fw-bold text-danger">Plan Premium</h4>
+            <p class="text-muted">Para empresas que buscan lo mejor en automatización y soporte.</p>
+            <ul class="list-unstyled text-start">
+              <li>✅ Mensajes ilimitados</li>
+              <li>✅ Soporte 24/7</li>
+              <li>✅ Personalización avanzada</li>
+            </ul>
+            <h3 class="fw-bold text-danger my-3">$30 <small class="fs-6">/ mes</small></h3>
+            <a href="#" class="btn btn-danger btn-lg">Elegir</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="mt-auto" style="background-color: var(--color-footer-fondo); border-top: 2px solid var(--color-footer-borde);">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+      <div class="text-muted">&copy; 2025 Neo Chat. Todos los derechos reservados.</div>
+      <div class="footer-links d-flex gap-3 mt-2 mt-md-0">
+        <a href="que es.html"><i class="bi bi-info-circle-fill me-1"></i>¿Qué es Neo Chat?</a>
+        <a href="sobre nosotros.html"><i class="bi bi-people-fill me-1"></i>Sobre Nosotros</a>
+        <a href="politica de privacidad.html"><i class="bi bi-shield-lock-fill me-1"></i>Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Librerias/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
